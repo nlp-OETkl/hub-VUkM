@@ -18,7 +18,7 @@ model = KNeighborsClassifier() #KNN模型
 model.fit(input_feature, dataset[1].values)
 
 client =OpenAI(
-    api_key="sk-d942676e2b044defa486b67c9b79e726",
+    api_key="sk-d942676exxxx9b79e726",
     base_url="https://api.deepseek.com/v1" #deepseek模型
 )
 
