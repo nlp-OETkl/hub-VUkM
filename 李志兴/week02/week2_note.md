@@ -374,11 +374,13 @@ plt_loss_curves(result_depth, "Loss vs Epoch(Depth comparision:hidden_dim = 128)
 
 ## 最终结果1
 
-<img src="./assets/image-20260122180852469.png" alt="image-20260122180852469" style="zoom: 33%;" />
+<img width="1268" height="1069" alt="image" src="https://github.com/user-attachments/assets/0aff99a1-9795-4949-9629-17a0413ebcf6" />
+
 
 可以看到“单层 MLP + 64 隐藏单元”已经能把训练 loss 压到很低；继续加宽基本是浪费参数。
 
-<img src="./assets/image-20260122180934913.png" alt="image-20260122180934913" style="zoom:33%;" />
+<img width="1275" height="1077" alt="image" src="https://github.com/user-attachments/assets/3cbe0ff9-4197-4243-a78d-e5b88a5d0530" />
+
 
 可以看到层数越多，loss下降越慢，且一层神经网络的loss最低，3层神经网络可能需要更多的轮次才能把loss下降的足够低。
 
@@ -388,17 +390,18 @@ plt_loss_curves(result_depth, "Loss vs Epoch(Depth comparision:hidden_dim = 128)
 
 一旦宽度到 32/48/64，模型就“够用”了；再加宽参数更多，但在**同样 epoch 数 + 同样 SGD 设置**下，训练 loss 改善就不明显了。32层就已经很好了
 
-<img src="./assets/image-20260122183742203.png" alt="image-20260122183742203" style="zoom: 33%;" />
+<img width="1273" height="1073" alt="image" src="https://github.com/user-attachments/assets/1558261d-2445-4437-aafe-aac53c5921aa" />
+
 
 将深度对照组的训练轮次从10轮变为20轮，同样层数越多下降越慢，但最终2层神经网络的loss最低，可能增加训练次数3层神经网络的最终loss值会更低
 
-<img src="./assets/image-20260122183813627.png" alt="image-20260122183813627" style="zoom:33%;" />
+<img width="1278" height="1075" alt="image" src="https://github.com/user-attachments/assets/1d0cda10-dda2-4f4f-a71d-92fcaaed5669" />
 
 ---
 
 增加深度对照组的训练轮次从20轮变为30轮，可以看到最终是3层神经网络的loss最低
 
-<img src="./assets/image-20260122184937190.png" alt="image-20260122184937190" style="zoom:33%;" />
+<img width="1276" height="1071" alt="image" src="https://github.com/user-attachments/assets/2dee21cf-df5d-469f-8060-f2531398f738" />
 
 # 实验结果总结:
 
@@ -477,5 +480,6 @@ plt_loss_curves(result_depth, "Loss vs Epoch(Depth comparision:hidden_dim = 128)
 
 - 训练 loss 更低 ≠ 泛化更好。
 - 更深/更宽的网络很可能更容易过拟合（训练 loss 低但验证/测试变差）。
+
 
 # 
